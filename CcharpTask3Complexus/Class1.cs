@@ -26,7 +26,7 @@ namespace CcharpTask3Complexus
             this.realValueB = realValueB;
         }
 
-        public string ComplexNumberDoubleToString()
+        public string ToString()
         {
             return String.Format("Вещественная часть {0}, Мнимая {1}", this.realValueA, realValueB);
         }
@@ -89,8 +89,101 @@ namespace CcharpTask3Complexus
         {
             b.realValueA *= -1;
             b.realValueB *= -1;
-
             return a + b;
+        }
+
+        public static ComplexNumberDouble operator -(ComplexNumberDouble a, int b)
+        {
+            a.realValueA -= b;
+            return a;
+        }
+        public static ComplexNumberDouble operator -(int a, ComplexNumberDouble b)
+        {
+            b.realValueA = a - b.realValueA;
+            return b;
+        }
+
+        public static ComplexNumberDouble operator -(ComplexNumberDouble a, float b)
+        {
+            a.realValueA -= b;
+            return a;
+        }
+        public static ComplexNumberDouble operator -(float a, ComplexNumberDouble b)
+        {
+            b.realValueA = a - b.realValueA;
+            return b;
+        }
+
+        public static ComplexNumberDouble operator -(ComplexNumberDouble a, double b)
+        {
+            a.realValueA -= b;
+            return a;
+        }
+        public static ComplexNumberDouble operator -(double a, ComplexNumberDouble b)
+        {
+            b.realValueA = a - b.realValueA;
+            return b;
+        }
+
+
+        public static ComplexNumberDouble operator *(ComplexNumberDouble a, ComplexNumberDouble b)
+        {
+            var RealProduct = (a.realValueA * b.realValueA) - (a.realValueB * b.realValueB);
+            var ImaginaryProduct = (a.realValueB * b.realValueA) - (a.realValueA * b.realValueB));
+
+            var ComplexNumberDoubleReturn = new ComplexNumberDouble(RealProduct, ImaginaryProduct);
+            return ComplexNumberDoubleReturn;
+        }
+
+        public static ComplexNumberDouble operator *(ComplexNumberDouble a, int b)
+        {
+            var RealProduct = (a.realValueA * b) ;
+            var ImaginaryProduct = (a.realValueB * b) ;
+
+            var ComplexNumberDoubleReturn = new ComplexNumberDouble(RealProduct, ImaginaryProduct);
+            return ComplexNumberDoubleReturn;
+        }
+        public static ComplexNumberDouble operator *(int a, ComplexNumberDouble b)
+        {
+            var RealProduct = (b.realValueA * a);
+            var ImaginaryProduct = (b.realValueB * a);
+
+            var ComplexNumberDoubleReturn = new ComplexNumberDouble(RealProduct, ImaginaryProduct);
+            return ComplexNumberDoubleReturn;
+        }
+
+        public static ComplexNumberDouble operator *(ComplexNumberDouble a, float b)
+        {
+            var RealProduct = (a.realValueA * b);
+            var ImaginaryProduct = (a.realValueB * b);
+
+            var ComplexNumberDoubleReturn = new ComplexNumberDouble(RealProduct, ImaginaryProduct);
+            return ComplexNumberDoubleReturn;
+        }
+        public static ComplexNumberDouble operator *(float a, ComplexNumberDouble b)
+        {
+            var RealProduct = (b.realValueA * a);
+            var ImaginaryProduct = (b.realValueB * a);
+
+            var ComplexNumberDoubleReturn = new ComplexNumberDouble(RealProduct, ImaginaryProduct);
+            return ComplexNumberDoubleReturn;
+        }
+
+        public static ComplexNumberDouble operator *(ComplexNumberDouble a, double b)
+        {
+            var RealProduct = (a.realValueA * b);
+            var ImaginaryProduct = (a.realValueB * b);
+
+            var ComplexNumberDoubleReturn = new ComplexNumberDouble(RealProduct, ImaginaryProduct);
+            return ComplexNumberDoubleReturn;
+        }
+        public static ComplexNumberDouble operator *(double a, ComplexNumberDouble b)
+        {
+            var RealProduct = (b.realValueA * a);
+            var ImaginaryProduct = (b.realValueB * a);
+
+            var ComplexNumberDoubleReturn = new ComplexNumberDouble(RealProduct, ImaginaryProduct);
+            return ComplexNumberDoubleReturn;
         }
     }
 

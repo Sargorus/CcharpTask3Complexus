@@ -16,7 +16,7 @@ namespace CcharpTask3Complexus.Tests
         public void ComplexNumberDoubleToStringTest()
         {
             var testComplexNumber = new ComplexNumberDouble(12, 122);
-            Assert.AreEqual("Вещественная часть 12, Мнимая 122", testComplexNumber.ComplexNumberDoubleToString());
+            Assert.AreEqual("Вещественная часть 12, Мнимая 122", testComplexNumber.ToString());
         }
 
         [TestMethod()]
@@ -25,7 +25,7 @@ namespace CcharpTask3Complexus.Tests
             var testComplexNumberA = new ComplexNumberDouble(12, 122);
             var testComplexNumberB = new ComplexNumberDouble(12, 3);
             var testComplexNumberSum = testComplexNumberA + testComplexNumberB;
-            Assert.AreEqual("Вещественная часть 24, Мнимая 125", testComplexNumberSum.ComplexNumberDoubleToString());
+            Assert.AreEqual("Вещественная часть 24, Мнимая 125", testComplexNumberSum.ToString());
         }
 
         [TestMethod()]
@@ -34,7 +34,7 @@ namespace CcharpTask3Complexus.Tests
             var testComplexNumberA = new ComplexNumberDouble(12, 122);
             var testComplexNumberB = 100;
             var testComplexNumberSum = testComplexNumberA + testComplexNumberB;
-            Assert.AreEqual("Вещественная часть 112, Мнимая 122", testComplexNumberSum.ComplexNumberDoubleToString());
+            Assert.AreEqual("Вещественная часть 112, Мнимая 122", testComplexNumberSum.ToString());
         }
 
         [TestMethod()]
@@ -43,7 +43,7 @@ namespace CcharpTask3Complexus.Tests
             var testComplexNumberA = 304;
             var testComplexNumberB = new ComplexNumberDouble(12, 122);
             var testComplexNumberSum = testComplexNumberA + testComplexNumberB;
-            Assert.AreEqual("Вещественная часть 316, Мнимая 122", testComplexNumberSum.ComplexNumberDoubleToString());
+            Assert.AreEqual("Вещественная часть 316, Мнимая 122", testComplexNumberSum.ToString());
         }
 
         [TestMethod()]
@@ -52,7 +52,7 @@ namespace CcharpTask3Complexus.Tests
             var testComplexNumberA = new ComplexNumberDouble(12, 122);
             var testComplexNumberB = new ComplexNumberDouble(12, 3);
             var testComplexNumberSum = testComplexNumberA - testComplexNumberB;
-            Assert.AreEqual("Вещественная часть 0, Мнимая 119", testComplexNumberSum.ComplexNumberDoubleToString());
+            Assert.AreEqual("Вещественная часть 0, Мнимая 119", testComplexNumberSum.ToString());
         }
 
     }
