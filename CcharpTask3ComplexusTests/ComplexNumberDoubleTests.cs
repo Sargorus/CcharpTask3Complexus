@@ -26,7 +26,7 @@ namespace CcharpTask3Complexus.Tests
             var testComplexNumberB = new ComplexNumberDouble(12, 3);
             var testComplexNumberSum = testComplexNumberA + testComplexNumberB;
             var testComplexNumberSumEtalon = new ComplexNumberDouble(24, 125);
-            Assert.IsTrue(Equals(testComplexNumberSum, testComplexNumberSumEtalon));
+            Assert.AreEqual(testComplexNumberSum, testComplexNumberSumEtalon);
         }
 
         [TestMethod()]
@@ -38,7 +38,7 @@ namespace CcharpTask3Complexus.Tests
 
             var testComplexNumberSumEtalon = new ComplexNumberDouble(112, 122);
 
-            Assert.IsTrue(Equals(testComplexNumberSum, testComplexNumberSumEtalon));
+            Assert.AreEqual(testComplexNumberSum, testComplexNumberSumEtalon);
         }
 
         [TestMethod()]
@@ -49,7 +49,7 @@ namespace CcharpTask3Complexus.Tests
             var testComplexNumberSum = testNumberA + testComplexNumberB;
 
             var testComplexNumberSumEtalon = new ComplexNumberDouble(316.30, 122);
-            Assert.IsTrue(Equals(testComplexNumberSum, testComplexNumberSumEtalon));
+            Assert.AreEqual(testComplexNumberSum, testComplexNumberSumEtalon);
         }
 
         [TestMethod()]
@@ -60,7 +60,7 @@ namespace CcharpTask3Complexus.Tests
             var testComplexNumberSum = testNumberA + testComplexNumberB;
 
             var testComplexNumberSumEtalon = new ComplexNumberDouble(15.141499996185303, 122);
-            Assert.IsTrue(Equals(testComplexNumberSum, testComplexNumberSumEtalon));
+            Assert.AreEqual(testComplexNumberSum, testComplexNumberSumEtalon);
             //Assert.AreEqual("Вещественная часть 10, Мнимая 12", testComplexNumberSum.ToString());
         }
 
@@ -72,7 +72,7 @@ namespace CcharpTask3Complexus.Tests
             var testComplexNumberSum = testComplexNumberA - testComplexNumberB;
 
             var testComplexNumberSumEtalon = new ComplexNumberDouble(0, 119);
-            Assert.IsTrue(Equals(testComplexNumberSum, testComplexNumberSumEtalon));
+            Assert.AreEqual(testComplexNumberSum, testComplexNumberSumEtalon);
         }
 
         [TestMethod()]
@@ -84,7 +84,7 @@ namespace CcharpTask3Complexus.Tests
 
             var testComplexNumberSumEtalon = new ComplexNumberDouble(2.5294117647058822, 0.8823529411764706);
             //Assert.AreEqual("Вещественная часть 12, Мнимая 122", testComplexNumberSum.ToString());
-            Assert.IsTrue(Equals(testComplexNumberSum, testComplexNumberSumEtalon));
+            Assert.AreEqual(testComplexNumberSum, testComplexNumberSumEtalon);
         }
 
         [TestMethod()]
@@ -96,7 +96,7 @@ namespace CcharpTask3Complexus.Tests
 
             var testComplexNumberSumEtalon = new ComplexNumberDouble(10, 12);
             // Assert.AreEqual("Вещественная часть 10, Мнимая 12", testComplexNumberC.ToString());
-            Assert.IsTrue(Equals(testComplexNumberC, testComplexNumberSumEtalon));
+            Assert.AreEqual(testComplexNumberC, testComplexNumberSumEtalon);
         }
 
 
@@ -109,7 +109,7 @@ namespace CcharpTask3Complexus.Tests
 
             var testComplexNumberSumEtalon = new ComplexNumberDouble(5, 12);
             //Assert.AreEqual("Вещественная часть 5, Мнимая 12", testComplexNumberC.ToString());
-            Assert.IsTrue(Equals(testComplexNumberC, testComplexNumberSumEtalon));
+            Assert.AreEqual(testComplexNumberC, testComplexNumberSumEtalon);
 
         }
 
@@ -122,7 +122,7 @@ namespace CcharpTask3Complexus.Tests
 
             var testComplexNumberSumEtalon = new ComplexNumberDouble(6.8, -1.6);
             //Assert.AreEqual("Вещественная часть 6,8, Мнимая -1,6", testComplexNumberC.ToString());
-            Assert.IsTrue(Equals(testComplexNumberC, testComplexNumberSumEtalon));
+            Assert.AreEqual(testComplexNumberC, testComplexNumberSumEtalon);
         }
 
     }
