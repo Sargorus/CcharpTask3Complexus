@@ -202,7 +202,7 @@ namespace CcharpTask3Complexus
 
         public static ComplexNumberDouble operator /(ComplexNumberDouble a, ComplexNumberDouble b)
         {
-            if (b.realValueA != 0 && b.realValueB != 0)
+            if (b.realValueA != 0 || b.realValueB != 0)
             {
                 var realProduct = ((a.realValueA * b.realValueA) + (a.realValueB * b.realValueB)) / (b.realValueA * b.realValueA + b.realValueB * b.realValueB);
                 var imaginaryProduct = ((a.realValueB * b.realValueA) - (a.realValueA * b.realValueB)) / (b.realValueA * b.realValueA + b.realValueB * b.realValueB);
@@ -213,9 +213,9 @@ namespace CcharpTask3Complexus
 
                 return complexNumberDoubleReturn;
             }
-            var complexNumberDoubleReturnZero = new ComplexNumberDouble(0, 0);
-            return complexNumberDoubleReturnZero;
-            // throw new NotImplementedException();// ide само предложило объект исключения
+            // var complexNumberDoubleReturnZero = new ComplexNumberDouble(0, 0);
+            // return complexNumberDoubleReturnZero;
+            throw new NotImplementedException();// ide само предложило объект исключения
             // Тут либо исключение бросать (вроде так правильно) либо, как я сейчас сделал оставлять нулевыми
         }
 
@@ -227,9 +227,9 @@ namespace CcharpTask3Complexus
                 var complexNumberDoubleReturn = new ComplexNumberDouble(a.realValueA / b, a.realValueB);
                 return complexNumberDoubleReturn;
             }
-            var complexNumberDoubleReturnZero = new ComplexNumberDouble(0, 0);
-            return complexNumberDoubleReturnZero;
-            // throw new NotImplementedException();// ide само предложило объект исключения
+            // var complexNumberDoubleReturnZero = new ComplexNumberDouble(0, 0);
+            // return complexNumberDoubleReturnZero;
+            throw new NotImplementedException();// ide само предложило объект исключения
             // Тут либо исключение бросать (вроде так правильно) либо, как я сейчас сделал оставлять нулевыми
         }
 
@@ -241,9 +241,9 @@ namespace CcharpTask3Complexus
                 var complexNumberDoubleReturn = new ComplexNumberDouble(a.realValueA / b, a.realValueB);
                 return complexNumberDoubleReturn;
             }
-            var complexNumberDoubleReturnZero = new ComplexNumberDouble(0, 0);
-            return complexNumberDoubleReturnZero;
-            // throw new NotImplementedException();// ide само предложило объект исключения
+            // var complexNumberDoubleReturnZero = new ComplexNumberDouble(0, 0);
+            // return complexNumberDoubleReturnZero;
+            throw new NotImplementedException();// ide само предложило объект исключения
             // Тут либо исключение бросать (вроде так правильно) либо, как я сейчас сделал оставлять нулевыми
         }
 
@@ -255,9 +255,9 @@ namespace CcharpTask3Complexus
                 var complexNumberDoubleReturn = new ComplexNumberDouble(a.realValueA / b, a.realValueB);
                 return complexNumberDoubleReturn;
             }
-            var complexNumberDoubleReturnZero = new ComplexNumberDouble(0, 0);
-            return complexNumberDoubleReturnZero;
-            // throw new NotImplementedException();// ide само предложило объект исключения
+            // var complexNumberDoubleReturnZero = new ComplexNumberDouble(0, 0);
+            // return complexNumberDoubleReturnZero;
+            throw new NotImplementedException();// ide само предложило объект исключения
             // Тут либо исключение бросать (вроде так правильно) либо, как я сейчас сделал оставлять нулевыми
         }
 
@@ -268,9 +268,9 @@ namespace CcharpTask3Complexus
                 var complexA = new ComplexNumberDouble(a, 0);
                 return complexA / b;
             }
-            var complexNumberDoubleReturnZero = new ComplexNumberDouble(0, 0);
-            return complexNumberDoubleReturnZero;
-            // throw new NotImplementedException();// ide само предложило объект исключения
+            // var complexNumberDoubleReturnZero = new ComplexNumberDouble(0, 0);
+            // return complexNumberDoubleReturnZero;
+            throw new NotImplementedException();// ide само предложило объект исключения
             // Тут либо исключение бросать (вроде так правильно) либо, как я сейчас сделал оставлять нулевыми
         }
 
@@ -281,9 +281,9 @@ namespace CcharpTask3Complexus
                 var complexA = new ComplexNumberDouble(a, 0);
                 return complexA / b;
             }
-            var complexNumberDoubleReturnZero = new ComplexNumberDouble(0, 0);
-            return complexNumberDoubleReturnZero;
-            // throw new NotImplementedException();// ide само предложило объект исключения
+            // var complexNumberDoubleReturnZero = new ComplexNumberDouble(0, 0);
+            // return complexNumberDoubleReturnZero;
+            throw new NotImplementedException();// ide само предложило объект исключения
             // Тут либо исключение бросать (вроде так правильно) либо, как я сейчас сделал оставлять нулевыми
         }
 
@@ -294,9 +294,9 @@ namespace CcharpTask3Complexus
                 var complexA = new ComplexNumberDouble(a, 0);
                 return complexA / b;
             }
-            var complexNumberDoubleReturnZero = new ComplexNumberDouble(0, 0);
-            return complexNumberDoubleReturnZero;
-            // throw new NotImplementedException();// ide само предложило объект исключения
+            // var complexNumberDoubleReturnZero = new ComplexNumberDouble(0, 0);
+            // return complexNumberDoubleReturnZero;
+            throw new NotImplementedException();// ide само предложило объект исключения
             // Тут либо исключение бросать (вроде так правильно) либо, как я сейчас сделал оставлять нулевыми
         }
 

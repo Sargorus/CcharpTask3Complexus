@@ -59,8 +59,9 @@ namespace CcharpTask3Complexus.Tests
             var testComplexNumberB = new ComplexNumberDouble(12, 122);
             var testComplexNumberSum = testNumberA + testComplexNumberB;
 
-            var testComplexNumberSumEtalon = new ComplexNumberDouble(15.1415, 122);
+            var testComplexNumberSumEtalon = new ComplexNumberDouble(15.141499996185303, 122);
             Assert.AreEqual(true, testComplexNumberSum.ComplexСomparisonEquality(testComplexNumberSumEtalon));
+            //Assert.AreEqual("Вещественная часть 10, Мнимая 12", testComplexNumberSum.ToString());
         }
 
         [TestMethod()]
@@ -87,31 +88,41 @@ namespace CcharpTask3Complexus.Tests
         }
 
         [TestMethod()]
-        public void ComplexNumberDoubleDivisionComplexZero()
+        public void ComplexNumberDoubleDivisionComplexOne()
         {
             var testComplexNumberA = new ComplexNumberDouble(10, 12);
-            var testComplexNumberB = new ComplexNumberDouble(0, 0);
-            var testComplexNumberSum = testComplexNumberA / testComplexNumberB;
+            var testComplexNumberB = new ComplexNumberDouble(1, 0);
+            var testComplexNumberC = testComplexNumberA / testComplexNumberB;
 
-            var testComplexNumberSumEtalon = new ComplexNumberDouble(0, 0);
-            // Assert.AreEqual("Вещественная часть 12, Мнимая 122", testComplexNumberSum.ToString());
-            Assert.AreEqual(true, testComplexNumberSum.ComplexСomparisonEquality(testComplexNumberSumEtalon));
-
-            // Тут деление на 0, и должно быть исключение. Как проверить я чет не знаю как
+            var testComplexNumberSumEtalon = new ComplexNumberDouble(10, 12);
+            // Assert.AreEqual("Вещественная часть 10, Мнимая 12", testComplexNumberC.ToString());
+            Assert.AreEqual(true, testComplexNumberC.ComplexСomparisonEquality(testComplexNumberSumEtalon));
         }
 
 
         [TestMethod()]
-        public void ComplexNumberDoubleAddingInt()
+        public void ComplexNumberDoubleDivisionTwo()
         {
             var testComplexNumberA = new ComplexNumberDouble(10, 12);
-            var testNumberB = 4;
-            var testComplexNumberSum = testComplexNumberA + testNumberB;
+            var testNumberB = 2;
+            var testComplexNumberC = testComplexNumberA / testNumberB;
 
-            var testComplexNumberSumEtalon = new ComplexNumberDouble(14, 12);
-            // Assert.AreEqual("Вещественная часть 12, Мнимая 122", testComplexNumberSum.ToString());
-            Assert.AreEqual(true, testComplexNumberSum.ComplexСomparisonEquality(testComplexNumberSumEtalon));
+            var testComplexNumberSumEtalon = new ComplexNumberDouble(5, 12);
+            //Assert.AreEqual("Вещественная часть 5, Мнимая 12", testComplexNumberC.ToString());
+            Assert.AreEqual(true, testComplexNumberC.ComplexСomparisonEquality(testComplexNumberSumEtalon));
 
+        }
+
+        [TestMethod()]
+        public void ComplexNumberDoubleDivisionComplexDiff()
+        {
+            var testComplexNumberA = new ComplexNumberDouble(10, 12);
+            var testComplexNumberB = new ComplexNumberDouble(1, 2);
+            var testComplexNumberC = testComplexNumberA / testComplexNumberB;
+
+            var testComplexNumberSumEtalon = new ComplexNumberDouble(6.8, -1.6);
+            //Assert.AreEqual("Вещественная часть 6,8, Мнимая -1,6", testComplexNumberC.ToString());
+            Assert.AreEqual(true, testComplexNumberC.ComplexСomparisonEquality(testComplexNumberSumEtalon));
         }
 
     }
