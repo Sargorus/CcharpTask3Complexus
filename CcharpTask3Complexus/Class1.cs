@@ -141,7 +141,7 @@ namespace CcharpTask3Complexus
         public static ComplexNumberDouble operator *(ComplexNumberDouble a, ComplexNumberDouble b)
         {
             var realProduct = (a.realValueA * b.realValueA) - (a.realValueB * b.realValueB);
-            var imaginaryProduct = ((a.realValueB * b.realValueA) - (a.realValueA * b.realValueB));
+            var imaginaryProduct = ((a.realValueB * b.realValueA) + (a.realValueA * b.realValueB));
 
             var complexNumberDoubleReturn = new ComplexNumberDouble(realProduct, imaginaryProduct);
             return complexNumberDoubleReturn;
@@ -299,6 +299,16 @@ namespace CcharpTask3Complexus
             throw new NotImplementedException();// ide само предложило объект исключения
             // Тут либо исключение бросать (вроде так правильно) либо, как я сейчас сделал оставлять нулевыми
         }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is ComplexNumberDouble other)
+            {
+                return realValueA == other.realValueA && realValueB == other.realValueB;
+            }
+            return false;
+        }
+
 
     }
 

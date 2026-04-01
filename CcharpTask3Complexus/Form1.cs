@@ -32,11 +32,19 @@ namespace CcharpTask3Complexus
                         result = firstComplex * secondComplex;
                         break;
                     case "/":
-                        result = firstComplex / secondComplex;
+                        if (bRealValue == 0 && bImaginaryValue == 0)
+                        {
+                            flagMsg = true;
+                            resultmsg = "Делить на 0 нельзя!";
+                        }
+                        else
+                        {
+                            result = firstComplex / secondComplex;
+                        }
                         break;
                     case "=":
                         // если минус, то вычитаем
-                        if (firstComplex.ComplexСomparisonEquality(secondComplex))
+                        if (Equals(secondComplex, firstComplex))
                         {
                             resultmsg = "Равны";
                         }
