@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             labelTextTask = new Label();
             textRealValueA = new TextBox();
             textImaginaryValueA = new TextBox();
@@ -39,6 +40,8 @@
             labelSecondTerm = new Label();
             labelResult = new Label();
             labelOperator = new Label();
+            pictureNubmers = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureNubmers).BeginInit();
             SuspendLayout();
             // 
             // labelTextTask
@@ -90,12 +93,13 @@
             cmdOperator.Name = "cmdOperator";
             cmdOperator.Size = new Size(151, 28);
             cmdOperator.TabIndex = 5;
+            cmdOperator.SelectedIndexChanged += cmdOperator_SelectedIndexChanged;
             // 
             // textResult
             // 
-            textResult.Location = new Point(92, 214);
+            textResult.Location = new Point(92, 252);
             textResult.Name = "textResult";
-            textResult.Size = new Size(409, 27);
+            textResult.Size = new Size(635, 27);
             textResult.TabIndex = 6;
             // 
             // labelFirstTerm
@@ -119,7 +123,7 @@
             // labelResult
             // 
             labelResult.AutoSize = true;
-            labelResult.Location = new Point(23, 214);
+            labelResult.Location = new Point(11, 255);
             labelResult.Name = "labelResult";
             labelResult.Size = new Size(75, 20);
             labelResult.TabIndex = 10;
@@ -134,11 +138,22 @@
             labelOperator.TabIndex = 11;
             labelOperator.Text = "Операция";
             // 
+            // pictureNubmers
+            // 
+            pictureNubmers.Image = (Image)resources.GetObject("pictureNubmers.Image");
+            pictureNubmers.Location = new Point(429, 12);
+            pictureNubmers.Name = "pictureNubmers";
+            pictureNubmers.Size = new Size(339, 234);
+            pictureNubmers.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureNubmers.TabIndex = 12;
+            pictureNubmers.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(535, 289);
+            ClientSize = new Size(780, 329);
+            Controls.Add(pictureNubmers);
             Controls.Add(labelOperator);
             Controls.Add(labelResult);
             Controls.Add(labelSecondTerm);
@@ -152,6 +167,7 @@
             Controls.Add(labelTextTask);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureNubmers).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -169,5 +185,6 @@
         private Label labelSecondTerm;
         private Label labelResult;
         private Label labelOperator;
+        private PictureBox pictureNubmers;
     }
 }

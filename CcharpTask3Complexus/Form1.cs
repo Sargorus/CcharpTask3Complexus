@@ -18,8 +18,7 @@ namespace CcharpTask3Complexus
 
                 ComplexNumberDouble result = new ComplexNumberDouble(0, 0);
                 string resultmsg = "";
-
-                // смотрим что выбрали в cmbOperation
+                var flagMsg = false;
                 switch (cmdOperator.Text)
                 {
                     case "+":
@@ -45,14 +44,16 @@ namespace CcharpTask3Complexus
                         {
                             resultmsg = "Ќе равны";
                         }
+                        flagMsg = true;
                         break;
                     default:
                         // а если что-то другое, то просто 0 выводим,
                         // такое маловеро€тно, но надо указать иначе не скомпилитс€
+                        flagMsg = true;
                         resultmsg = "Ќет оператора";
                         break;
                 }
-                if (cmdOperator.Text == "=")
+                if (flagMsg)
                 {
                     textResult.Text = resultmsg;
                 }
@@ -91,5 +92,11 @@ namespace CcharpTask3Complexus
         {
             Calculate();
         }
+
+        private void cmdOperator_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Calculate();
+        }
+
     }
 }
